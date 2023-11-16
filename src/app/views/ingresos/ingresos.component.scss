@@ -1,0 +1,134 @@
+.un-views-cards-bottom-ingresos {
+    flex: 1;
+    padding: 14px;
+    background-color: white;
+    height: 300px;
+    border-radius: 60px;
+    width: 470px;
+
+    &-container {
+        height: 100%;
+        width: 100%;
+
+        &-top {
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            height: 30%;
+
+            &-icon {
+                display: flex;
+                justify-content: space-between;
+                width: 38%;
+                padding-left: 20px;
+
+                &-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    background-color: #282f65;
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 100px;
+
+                    &-size {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 36px;
+                    }
+                }
+
+                &-number {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &-text {
+                        margin-top: 10px;
+                        font-size: 22px;
+                        color: #aaaaaa;
+                    }
+
+                    &-number {
+                        font-size: 30px;
+                        margin-top: 10px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &-month {
+                display: flex;
+                align-items: end;
+                justify-content: end;
+                width: 40%;
+                padding-right: 30px;
+
+                &-row {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 40px;
+                        color: #58a08c;
+                    }
+
+                    &-porcent {
+                        font-size: 22px;
+                        font-weight: 900;
+                        color: #58a08c;
+                    }
+
+                    &-text {
+                        font-size: 18px;
+                        color: #aaaaaa;
+                    }
+                }
+            }
+        }
+
+        &-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 230px;
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    .un-views-cards-bottom-ingresos {
+        margin-bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        padding-left: 0;
+
+        &-container {
+            width: 450px;
+
+            &-top {
+                margin: 0;
+                padding: 0;
+            }
+
+            &-line {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="un-views-cards-bottom-egresos">
+    <div class="un-views-cards-bottom-egresos-container">
+        <div class="un-views-cards-bottom-egresos-container-top">
+            <div class="un-views-cards-bottom-egresos-container-top-icon">
+                <div class="un-views-cards-bottom-egresos-container-top-icon-text">
+                    <mat-icon class="un-views-cards-bottom-egresos-container-top-icon-text-size">arrow_upward</mat-icon>
+                </div>
+                <div class="un-views-cards-bottom-egresos-container-top-icon-number">
+                    <h3 class="un-views-cards-bottom-egresos-container-top-icon-number-text">Egresos</h3>
+                    <p class="un-views-cards-bottom-egresos-container-top-icon-number-number">$32,123</p>
+                </div>
+            </div>
+            <div class="un-views-cards-bottom-egresos-container-top-month">
+                <div class="un-views-cards-bottom-egresos-container-top-month-row">
+                    <mat-icon class="un-views-cards-bottom-egresos-container-top-month-row-icon">arrow_drop_down</mat-icon>
+                    <h3 class="un-views-cards-bottom-egresos-container-top-month-row-porcent">-0,5%</h3>
+                    <p class="un-views-cards-bottom-egresos-container-top-month-row-text">Mes pasado</p>
+                </div>
+            </div>
+        </div>
+        <div class="un-views-cards-bottom-egresos-container-line">
+            <canvas class="un-views-cards-bottom-egresos-container-line-canvas" baseChart [datasets]="lineChartData"
+                [labels]="lineChartLabels">
+            </canvas>
+        </div>
+    </div>
+</div>

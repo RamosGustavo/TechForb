@@ -1,0 +1,27 @@
+<div class="un-views-cards-bottom-card" *ngIf="cardData && cardData.length > 0">
+    <div class="un-views-cards-bottom-card-content">
+        <div class="un-views-cards-bottom-card-content-size">
+            <div class="un-views-cards-bottom-card-content-size-text">
+                <h3 class="un-views-cards-bottom-card-content-size-text-saldo">Mi saldo</h3>
+                <p class="un-views-cards-bottom-card-content-size-text-number">{{ cardData[0].balance |
+                    currency:'USD':'symbol' }}</p>
+            </div>
+            <div class="un-views-cards-bottom-card-content-size-circles">
+                <div class="un-views-cards-bottom-card-content-size-circles-white"></div>
+                <div class="un-views-cards-bottom-card-content-size-circles-grey"></div>
+            </div>
+        </div>
+        <div class="un-views-cards-bottom-card-content-numbers">
+            <p class="un-views-cards-bottom-card-content-numbers-p">.... .... .... <span>{{
+                    cardData[0].cardNumber}}</span></p>
+        </div>
+        <div class="un-views-cards-bottom-card-content-footer">
+            <p class="un-views-cards-bottom-card-content-footer-titular">Titular tarjeta</p>
+            <p class="un-views-cards-bottom-card-content-footer-hasta">Válida hasta</p>
+        </div>
+        <div class="un-views-cards-bottom-card-content-final">
+            <h3 class="un-views-cards-bottom-card-content-final-text">{{ cardData[0].cardholderName }}</h3>
+            <h3 class="un-views-cards-bottom-card-content-final-date">{{ cardData[0].validUntil }}</h3>
+        </div>
+    </div>
+</div>
