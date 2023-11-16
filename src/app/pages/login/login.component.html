@@ -1,1 +1,72 @@
-<p>login works!</p>
+<section class="un-pages-login">
+    <div class="un-pages-login-left">
+        <h2 class="un-pages-login-left-title">
+            Bienvenido a <span>Unicomer</span>
+        </h2>
+    </div>
+    <section class="un-pages-login-right">
+        <div class="un-pages-login-right-container">
+            <div class="un-pages-login-right-container-logo">
+                <h2 class="un-pages-login-right-container-logo-title">Logo</h2>
+            </div>
+            <form [formGroup]="userForm" class="un-pages-login-right-container-inputs">
+                <mat-form-field class="un-pages-login-right-container-inputs-size">
+                    <mat-label>Tipo de documento</mat-label>
+                    <input formControlName="tipo" matInput />
+                    <mat-error *ngIf="userForm.get('tipo')?.hasError('required')">Campo
+                        requerido</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="un-pages-login-right-container-inputs-size">
+                    <mat-label class="un-pages-login-right-container-inputs-size-label">Numero de documento</mat-label>
+                    <input formControlName="numero" matInput />
+                    <mat-error *ngIf="userForm.get('numero')?.hasError('required')">Campo
+                        requerido</mat-error>
+                    <mat-error *ngIf="userForm.get('numero')?.hasError('pattern')">Ingresa un número
+                        válido</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="un-pages-login-right-container-inputs-size">
+                    <mat-label>Clave</mat-label>
+                    <input formControlName="clave" type="password" matInput />
+                    <mat-error *ngIf="userForm.get('clave')?.hasError('required')">Campo
+                        requerido</mat-error>
+                    <mat-error *ngIf="userForm.get('clave')?.hasError('minlength')">La clave es muy
+                        corta</mat-error>
+                    <mat-error *ngIf="userForm.get('clave')?.hasError('maxlength')">La clave es muy
+                        larga</mat-error>
+                </mat-form-field>
+                <div class="un-pages-login-right-container-inputs-button">
+                    <!-- Modify the button to call a method on click -->
+                    <button mat-list-item routerLink="/home" class="un-pages-login-right-container-inputs-button-title"
+                    >Ingresar</button>
+
+                </div>
+            </form>
+            <div class="un-pages-login-right-container-footer">
+                <div class="un-pages-login-right-container-footer-subtitle">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="un-pages-login-right-container-footer-subtitle-keyboard" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                        <line x1="6" y1="10" x2="6" y2="10" />
+                        <line x1="10" y1="10" x2="10" y2="10" />
+                        <line x1="14" y1="10" x2="14" y2="10" />
+                        <line x1="18" y1="10" x2="18" y2="10" />
+                        <line x1="6" y1="14" x2="6" y2="14.01" />
+                        <line x1="18" y1="14" x2="18" y2="14.01" />
+                        <line x1="10" y1="14" x2="14" y2="14" />
+                    </svg>
+                    <h2 class="un-pages-login-right-container-footer-subtitle-text">Teclado virtual</h2>
+                </div>
+                <div class="un-pages-login-right-container-footer-register">
+                    <a mat-list-item routerLink="/register"
+                        class="un-pages-login-right-container-footer-register-text">¿No tienes cuenta? Registrate aqui
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
