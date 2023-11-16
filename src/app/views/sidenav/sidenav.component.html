@@ -1,0 +1,15 @@
+<section class="un-views-sidenav">
+    <div class="un-views-sidenav-container">
+        <div class="un-views-sidenav-container-header">
+            <h2 class="un-views-sidenav-container-header-title">LOGO</h2>
+        </div>
+        <div class="un-views-sidenav-container-titles">
+            <div class="un-views-sidenav-container-titles-second">
+                <a *ngFor="let item of menuItems" class="menu-item">
+                    <mat-icon class="icon">{{ item.icon }}</mat-icon>
+                    <span class="title">{{ item.title }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
