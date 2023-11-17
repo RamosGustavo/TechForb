@@ -30,15 +30,13 @@
 
             .card {
                 width: calc(33.33% - 20px);
-                /* 33.33% del ancho menos el espacio entre las cards */
                 margin-bottom: 20px;
-                /* Espacio entre las cards */
             }
         }
     }
 
     @media (max-width: 1850px) {
-        .un-views-cards-container-dos {
+        .un-views-cards {
             margin-top: 20px;
             flex-direction: row;
             flex-wrap: wrap;
@@ -52,7 +50,7 @@
     }
 
     @media (max-width: 1350px) {
-        .un-views-cards-container-dos {
+        .un-views-cards {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -78,9 +76,17 @@
 
                 &-dos,
                 &-tres {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     padding: 0;
                     margin: 0;
                     flex-direction: column;
+
+                    .card {
+                        width: 70%;
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
