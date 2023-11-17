@@ -60,11 +60,9 @@ private loadData(): void {
 }
 
   public chartClicked({ event, active }: { event?: any; active?: object[] }): void {
-    console.log(event, active);
   }
 
   public chartHovered({ event, active }: { event?: any; active?: object[] }): void {
-    console.log(event, active);
   }
 
   public randomize(): void {

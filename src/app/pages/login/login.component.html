@@ -9,7 +9,7 @@
             <div class="un-pages-login-right-container-logo">
                 <h2 class="un-pages-login-right-container-logo-title">Logo</h2>
             </div>
-            <form [formGroup]="userForm" class="un-pages-login-right-container-inputs">
+            <form [formGroup]="userForm"  (ngSubmit)="loginUser()"class="un-pages-login-right-container-inputs">
                 <mat-form-field class="un-pages-login-right-container-inputs-size">
                     <mat-label>Tipo de documento</mat-label>
                     <input formControlName="tipo" matInput />
@@ -38,7 +38,7 @@
                 </mat-form-field>
                 <div class="un-pages-login-right-container-inputs-button">
                     <!-- Modify the button to call a method on click -->
-                    <button mat-list-item routerLink="/home" class="un-pages-login-right-container-inputs-button-title"
+                    <button mat-list-item routerLink="/home" class="un-pages-login-right-container-inputs-button-title" type="submit"
                     >Ingresar</button>
 
                 </div>

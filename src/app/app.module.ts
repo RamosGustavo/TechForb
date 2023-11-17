@@ -27,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     NgChartsModule,
     MatPaginatorModule,
     MatCheckboxModule,
+    MatSnackBarModule,
   ],
   providers: [
     { provide: NgChartsConfiguration, useValue: { generateColors: false },},
