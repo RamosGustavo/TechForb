@@ -4,7 +4,7 @@
     background-color: #282f65;
     height: 340px;
     border-radius: 60px;
-    width: 550px;
+    width: 470px;
 
     &-content {
         height: 100%;
@@ -118,28 +118,6 @@
             &-date {
                 font-size: 22px;
                 padding-left: 20px;
-            }
-        }
-    }
-}
-
-
-@media (max-width: 1550px) {
-    .un-views-cards-bottom-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
-        width: 450px;
-
-        &-content {
-            margin: 0;
-            padding: 0;
-            width: 95%;
-
-            &-size {
-                margin: 0;
-                padding: 0;
             }
         }
     }
