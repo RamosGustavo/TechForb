@@ -13,6 +13,10 @@ import { SaldoComponent } from './views/saldo/saldo.component';
 import { SidenavComponent } from './views/sidenav/sidenav.component';
 import { HeaderComponent } from './views/header/header.component';
 import { CardsComponent } from './views/cards/cards.component';
+import { GraficsComponent } from './views/grafics/grafics.component';
+import { BalanceComponent } from './views/balance/balance.component';
+import { TransaccionesComponent } from './views/transacciones/transacciones.component';
+import { TableComponent } from './views/table/table.component';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,6 +25,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,11 @@ import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
     CardsComponent,
     EgresosComponent,
     IngresosComponent,
-    SaldoComponent
+    SaldoComponent,
+    GraficsComponent,
+    BalanceComponent,
+    TransaccionesComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +56,8 @@ import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
     MatIconModule,
     HttpClientModule,
     NgChartsModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
   ],
   providers: [
     { provide: NgChartsConfiguration, useValue: { generateColors: false },},

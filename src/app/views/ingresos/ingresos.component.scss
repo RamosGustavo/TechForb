@@ -2,9 +2,9 @@
     flex: 1;
     padding: 14px;
     background-color: white;
-    height: 300px;
+    height: 340px;
     border-radius: 60px;
-    width: 470px;
+    width: 550px;
 
     &-container {
         height: 100%;
@@ -74,6 +74,7 @@
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
+                    height: 80%;
 
                     &-icon {
                         display: flex;
@@ -87,11 +88,15 @@
                         font-size: 22px;
                         font-weight: 900;
                         color: #58a08c;
+                        margin: 0;
+                        padding: 0;
                     }
 
                     &-text {
                         font-size: 18px;
                         color: #aaaaaa;
+                        margin: 0;
+                        padding: 0;
                     }
                 }
             }

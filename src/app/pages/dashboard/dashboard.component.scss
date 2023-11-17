@@ -1,3 +1,11 @@
 .container {
     padding-left: 250px;
+
+    @media (max-width: 1350px) {
+        .container {
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
+

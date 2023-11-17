@@ -2,9 +2,9 @@
     flex: 1;
     padding: 14px;
     background-color: #282f65;
-    height: 300px;
+    height: 340px;
     border-radius: 60px;
-    width: 470px;
+    width: 550px;
 
     &-content {
         height: 100%;
@@ -126,7 +126,20 @@
 
 @media (max-width: 1550px) {
     .un-views-cards-bottom-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 40px;
-        width: 450px;
+        width: 90%;
+
+        &-content {
+            margin: 0;
+            padding: 0;
+
+            &-size {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 }

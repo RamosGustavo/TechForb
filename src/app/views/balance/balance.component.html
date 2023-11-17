@@ -1,0 +1,13 @@
+<div class="un-views-grafics-container">
+    <div class="un-views-grafics-container-doble">
+        <div class="un-views-grafics-container-doble-cansao">
+            <div class="un-views-grafics-container-doble-cansao-div">
+                <h2>Balance</h2>
+            </div>
+            <canvas baseChart class="chart" [data]="barChartData" [options]="barChartOptions"
+                [plugins]="barChartPlugins" [type]="barChartType" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+    </div>
+</div>

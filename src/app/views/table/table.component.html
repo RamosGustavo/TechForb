@@ -1,0 +1,54 @@
+<section class="un-views-table">
+    <div class="un-views-table-container">
+        <table class="un-views-table-container" mat-table [dataSource]="data">
+
+            <ng-container class="chek" matColumnDef="checkbox">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-checkbox></mat-checkbox>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="montoTotal">
+                <th mat-header-cell *matHeaderCellDef>Monto total</th>
+                <td mat-cell *matCellDef="let element" class="montoTotal-cell">{{ element.montoTotal }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="cuotas">
+                <th mat-header-cell *matHeaderCellDef>Cuotas</th>
+                <td mat-cell *matCellDef="let element" class="montoTotal-cell">{{ element.cuotas }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="fechaEmision">
+                <th mat-header-cell *matHeaderCellDef>Fecha de emisión</th>
+                <td mat-cell *matCellDef="let element" class="grey">{{ element.fechaEmision }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="mensual">
+                <th mat-header-cell *matHeaderCellDef>Mensual</th>
+                <td mat-cell *matCellDef="let element" class="montoTotal-cell">{{ element.mensual }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="tasaInteres">
+                <th mat-header-cell *matHeaderCellDef>Tasa de interés</th>
+                <td mat-cell *matCellDef="let element" class="grey">{{ element.tasaInteres }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="botones">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-button *ngIf="element.botonVisible === 'Pagar'" class="pagar">Pagar</button>
+                    <button mat-button *ngIf="element.botonVisible === 'Cancelado'" class="cancelado">Cancelado</button>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="puntosSuspensivos">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element" class="puntosSuspensivos">...</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+        </table>
+    </div>
+</section>
