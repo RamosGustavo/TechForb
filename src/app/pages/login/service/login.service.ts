@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   loginUser(user: any) {
-    return this.http.get(`${environment.apiUrl}/users`, user)
+    return this.http.post(`${environment.apiUrl}/users`, user)
   }
 
     isLoggedIn(): boolean {
