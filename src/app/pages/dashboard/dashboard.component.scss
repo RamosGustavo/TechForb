@@ -1,13 +1,3 @@
-.container {
+.dashboard {
     width: 100%;
-
-    @media (max-width: 1350px) {
-        .container {
-            margin-left: 0;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
-    }
 }
-
