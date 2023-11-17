@@ -28,7 +28,7 @@ export class LoginComponent {
         this.router.navigate(['home']);
       },
       error: (e) => {
-        this.openSnackBar(e.message);
+        this.openSnackBar('Datos incorrectos');
       },
     })
   }
