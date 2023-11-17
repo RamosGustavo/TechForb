@@ -40,24 +40,25 @@ export class BalanceComponent implements OnInit {
     this.loadData();
   }
 
-private loadData(): void {
-  this.balanceService.getChartData().subscribe(
-    (data) => {
-      if (Array.isArray(data)) {
-        this.barChartData.labels = data.map(item => item.label);
-        this.barChartData.datasets = [{
-          label: data[0].label,
-          data: data[0].data,
-        }, {
-          label: data[1].label,
-          data: data[1].data,
-        }];
+  private loadData(): void {
+    this.balanceService.getChartData().subscribe({
+      next: (data: any) => {
+        if (Array.isArray(data)) {
+          this.barChartData.labels = data.map(item => item.label);
+          this.barChartData.datasets = [{
+            label: data[0].label,
+            data: data[0].data,
+          }, {
+            label: data[1].label,
+            data: data[1].data,
+          }];
 
-        this.chart?.update();
+          this.chart?.update();
+        }
       }
     },
-  );
-}
+    );
+  }
 
   public chartClicked({ event, active }: { event?: any; active?: object[] }): void {
   }

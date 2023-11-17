@@ -18,16 +18,8 @@ import { BalanceComponent } from './views/balance/balance.component';
 import { TransaccionesComponent } from './views/transacciones/transacciones.component';
 import { TableComponent } from './views/table/table.component';
 
-import { MatTableModule } from '@angular/material/table';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MaterialModule } from './shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -44,22 +36,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     GraficsComponent,
     BalanceComponent,
     TransaccionesComponent,
-    TableComponent
+    TableComponent,
   ],
   imports: [
+    MaterialModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTableModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatIconModule,
-    HttpClientModule,
     NgChartsModule,
-    MatPaginatorModule,
-    MatCheckboxModule,
-    MatSnackBarModule,
   ],
   providers: [
     { provide: NgChartsConfiguration, useValue: { generateColors: false },},

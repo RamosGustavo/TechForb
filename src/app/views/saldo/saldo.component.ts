@@ -16,11 +16,12 @@ export class SaldoComponent implements OnInit {
     this.getCardData();
   }
 
+
   getCardData() {
-    this.saldoService.getCards().subscribe(
-      (data: any) => {
+    this.saldoService.getCards().subscribe({
+      next: (data: any) => {
         this.cardData = data;
       }
-    );
+    })
   }
 }
