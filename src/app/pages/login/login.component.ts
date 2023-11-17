@@ -15,7 +15,7 @@ export class LoginComponent {
   userForm = new FormGroup({
     numero: new FormControl('43785131', [Validators.required]),
     tipo: new FormControl('DNI', [Validators.required]),
-    clave: new FormControl('Challenge', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]),
+    password: new FormControl('Challenge', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]),
   });
 
   constructor(private router: Router, private loginService: LoginService, private _snackBar: MatSnackBar) { }
