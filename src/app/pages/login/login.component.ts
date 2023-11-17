@@ -28,7 +28,7 @@ export class LoginComponent {
         this.router.navigate(['home']);
       },
       error: (e) => {
-        this.openSnackBar(e.error);
+        this.openSnackBar(e.message);
       },
     })
   }
