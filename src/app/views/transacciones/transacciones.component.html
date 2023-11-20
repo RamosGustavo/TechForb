@@ -6,8 +6,8 @@
                 class="mat-elevation-z8">
                 <ng-container class="un-views-grafics-table-container-right-das-sas"
                     *ngFor="let column of displayedColumns; let i = index" [matColumnDef]="column">
-                    <th class="un-views-grafics-table-container-right-das-sas-ses" mat-header-cell
-                        *matHeaderCellDef>{{ column === 'position' ? '' : '' }}</th>
+                    <th class="un-views-grafics-table-container-right-das-sas-ses" mat-header-cell *matHeaderCellDef>{{
+                        column === 'position' ? '' : '' }}</th>
                     <td mat-cell *matCellDef="let element">
                         <ng-container class="un-views-grafics-table-container-right-das-sas-ses-td-icon"
                             *ngIf="column === 'position'">
@@ -24,8 +24,8 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
             <mat-paginator class="un-views-grafics-table-container-right-paginator" [pageSize]="5"
-            [pageSizeOptions]="[5]" showFirstLastButtons (page)="onPageChange($event)">
-        </mat-paginator>
+                [pageSizeOptions]="[5]" showFirstLastButtons (page)="onPageChange($event)">
+            </mat-paginator>
         </div>
     </div>
 </div>
